@@ -1,0 +1,1031 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+   
+  }
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  nav {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 50px; 
+    font-size: 20px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    position: relative;
+}
+
+nav ul li a:hover
+{
+  color: darkred;
+}
+
+
+nav ul li a:hover::before,
+nav ul li a.active::before {
+  color: darkred;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: darkred;
+}
+
+.logo-container {
+    margin-right: auto; /* Τοποθετεί το λογότυπο στην αριστερή άκρη */
+    background: transparent !important;
+    z-index: 1;
+}
+
+.logo {
+    height: 100%;
+}
+
+
+  
+
+
+
+
+  
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+  }
+
+  
+  html::-webkit-scrollbar{
+    width: .8rem;
+  }
+  
+  html::-webkit-scrollbar-track{
+    background: transparent;
+  }
+  
+  html::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+    border-radius: 5rem;
+  }
+
+
+  .logo{
+       width: 70px;
+  }
+
+
+.sidebar{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index:1;
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
+  @media(max-width: 900px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    .social-icons {
+        margin:-30px;
+        margin-bottom: -31px;
+       
+    }
+    
+}
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Μειώστε τον αριθμό των στηλών σε 2 */
+        grid-gap: 20px;
+    }
+
+    .photos {
+        margin-left: 0;
+    }
+
+    .photo3 img {
+        width: 100%;
+    }
+    .titlos
+    {
+       text-align: center; 
+    }
+
+    .description {
+        margin-right: -409px;
+        text-align: left;
+    }
+}
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+
+    }
+  }
+
+
+
+  .button
+  {
+    background-color: darkred;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    justify-content: center;
+    text-align: center;
+    text-decoration:none;
+    display:inline-block;
+    font-size: 16px;
+   margin-top: 120px;
+    border-radius: 5px;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 600px) {
+    .button {
+        padding: 10px 20px;
+        margin-top:90px;
+        font-size: 14px;
+    }
+    .container {
+        grid-template-columns: repeat(1, 1fr); /* Μόνο μια στήλη για μικρότερες οθόνες */
+        grid-gap: 10px; /* Μικρότερο grid gap για καλύτερη ανάγνωση */
+        margin-top: 10px; /* Μικρότερο top margin */
+      }
+    
+      .photos {
+        margin-left: 0; /* Αφαιρούμε το αρχικό left margin */
+        margin-top: 0; /* Αφαιρούμε το αρχικό top margin */
+      }
+    
+      .photos img {
+        width: 100%; /* Πλήρες πλάτος για φωτογραφίες σε μικρότερες οθόνες */
+        margin-bottom: 10px; /* Μικρότερο bottom margin για καλύτερη διαχείριση χώρου */
+      }
+    
+      .description {
+        text-align: center; /* Κεντράρισμα του κειμένου στο κέντρο της στήλης */
+        margin-top: 10px; /* Μικρότερο top margin */
+        font-size: 11px; /* Μικρότερο μέγεθος γραμματοσειράς για καλύτερη ανάγνωση */
+      }
+
+}
+
+  .button:hover
+  {
+    background-color: rgba(169, 50, 38, 0.8);
+  }
+
+
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    z-index: 0; 
+    margin: auto;
+    overflow: hidden; /* Κρύψτε τις εικόνες που είναι εκτός του παραθύρου προβολής */
+    height:910px;
+  }
+  
+  .mySlides {
+    display: none;
+    width: 100%; /* Καθορίστε το πλάτος της εικόνας στο 100% */
+    max-height: 800px; /* Καθορίστε το μέγιστο ύψος της εικόνας */
+    object-fit: cover; /* Αντικατάσταση του περιεχομένου με την εικόνα, διατηρώντας την αναλογία εικόνας */
+    object-position: center; /* Κεντράρισμα της εικόνας */
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    }
+
+    .dot:hover, .active {
+      background-color: #717171;
+        border: 2px solid white; /* Προσθήκη border κατά το hover */
+    }
+    .dots
+    {
+        margin-top:10px;
+        z-index: 3;
+    }
+
+  
+  
+
+
+  .logo-popup {
+    display: none;
+    position: absolute;
+    top: 17%; /* Προσαρμογή της θέσης προς τα πάνω */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+  
+  .logo-popup img {
+    width: 130px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+
+
+  .social-icons 
+  {
+    display: flex;
+    justify-content: flex-end;
+    transform: scale(1.4);
+    margin-right: 80px;
+    
+  }
+
+.social-icons .facebook-button + .instagram-button {
+    margin-left: -35px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+}
+
+.social-icons a:hover {
+    opacity: 0.7; 
+}
+
+
+
+
+
+
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    background-color: rgba(255, 228, 196, 0.671);
+    border-radius: 30px
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.photos img {
+    width: 90%;
+    margin-bottom: 20px; /* προσθέστε κάποιον επιπλέον χώρο μεταξύ των εικόνων */
+    border-radius: 5px;
+}
+
+.photo3 {
+    display: flex;
+    align-items: flex-end; /* τοποθετήστε την τρίτη εικόνα στο κάτω μέρος του container */
+    margin-left:-60px;
+}
+
+.photo3 img {
+    width: 690px;
+    border-radius: 5px;
+}
+
+.description {
+    text-align: left;
+    font-size: x-large;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Αλλαγή σε δύο στήλες για μικρότερες οθόνες */
+        grid-gap: 20px; /* Μικρότερο grid gap για καλύτερη ανάγνωση */
+        margin-top: 20px; /* Μικρότερο top margin */
+    }
+
+    .photos {
+        margin-left: 0; /* Αφαιρούμε το αρχικό left margin */
+        margin-top: 0; /* Αφαιρούμε το αρχικό top margin */
+    }
+
+    .photos img {
+        width: 100%; /* Πλήρες πλάτος για φωτογραφίες σε μικρότερες οθόνες */
+        margin-bottom: 10px; /* Μικρότερο bottom margin για καλύτερη διαχείριση χώρου */
+    }
+
+    .description {
+        text-align: center; /* Κεντράρισμα του κειμένου στο κέντρο της στήλης */
+    }
+}
+
+
+
+
+
+
+
+
+
+.products-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.product-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.product-item {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 5px;
+    height: 384px;
+}
+
+.product-item h3 {
+    margin-top: 10px;
+    font-size: medium
+}
+
+.view-more-button {
+    background-color: darkred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin:20px;
+}
+
+.view-more-button:hover {
+    background-color: rgba(169, 50, 38, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Slideshow container */
+ .slideshow-reviews {
+  position: relative;
+  background: #f1f1f1f1;
+  margin-top: 50px;
+}
+
+/* Slides */
+.mySlides-reviews {
+  display: none;
+  padding: 80px;
+  text-align: center;
+  font-size: 22px;
+}
+
+/* Next & previous buttons */
+.prev-reviews, .next-reviews {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 5px;
+  background-color: darkred;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Position the "next button" to the right */
+.next-reviews {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev-reviews:hover, .next-reviews:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dot/bullet/indicator container */
+.dots-reviews {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+  margin-bottom: 50px;
+}
+
+/* The dots/bullets/indicators */
+.dot-reviews {
+  cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot-reviews:hover {
+  background-color: #717171;
+  border: 2px solid white; /* Προσθήκη border κατά το hover */
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {
+  margin-top: 14px;
+  color: darkred;} 
+
+  .google-icon{
+    display: flex;
+    justify-content: center; /* Ευθυγράμμιση στο κέντρο οριζόντια */
+    align-items: center; /* Ευθυγράμμιση στο κέντρο κατακόρυφα */
+    margin-top: 10px; /* Ρύθμιση απόστασης από τα παραπάνω στοιχεία */
+  }
+  
+  .google-icon svg {
+    width: 50px; /* Προσαρμογή του μεγέθους του SVG */
+    height: 50px;
+  }
+
+  .stars-icon{
+    display: flex;
+    justify-content: center; /* Ευθυγράμμιση στο κέντρο οριζόντια */
+    align-items: center; /* Ευθυγράμμιση στο κέντρο κατακόρυφα */ /* Ρύθμιση απόστασης από τα παραπάνω στοιχεία */
+    margin-bottom: -30px;
+  }
+.stars-icon svg
+{
+  width: 110px;
+}
+
+
+
+
+
+
+
+
+.footer {
+    background-color:bisque;
+    color: #080303;
+    padding: 50px 0;
+    font-size: 12px;
+    border-radius: 10px
+}
+.footer-logo
+{
+    height: 140px;
+    
+    margin-right: 100px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+}
+
+.footer-section{
+    margin-bottom: 10px;
+    
+}
+.social-icons2  {
+    font-size: 10px;
+    transform: scale(1.7);
+    margin-left: 100px;
+    
+}
+
+.social-icons2 a:hover {
+    opacity: 0.7; 
+}
+
+
+
+
+
+.mpara
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    justify-content: center;
+    background-color: beige;
+    padding: 60px;
+    text-align: center;
+  margin-top: 0px;
+}
+
+.mpara a
+{
+    text-decoration: none;
+    color:#080303;
+}
+
+.mpara a:hover
+{
+    text-decoration: underline;
+}
+
+.mpara header
+{
+    font-size: 43px;
+  font-weight: bold;
+}
+.mpara p {
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+.scrollup
+{
+  position: fixed;
+  right: 4rem;
+  bottom: -50%;
+  background-color: rgba(243, 238, 238, 0.596);
+  color:#ffffff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+  display: inline-flex;
+  padding: 9px;
+  font-size: 200px;
+  z-index: 10000;
+  transition: bottom .4s, transform .4s;
+}
+
+.scrollup:hover
+{
+  transform: translateY(-.5rem);
+}
+
+.show-scroll
+{
+  bottom:3rem;
+}
+
+
+
+/* -------------About------------ */
+
+
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 80px;
+    
+}
+
+#map {
+    width: 50%; /* Προσαρμόστε το πλάτος του χάρτη όπως επιθυμείτε */
+    height: 426px; /* Προσαρμόστε το ύψος του χάρτη όπως επιθυμείτε */
+    margin-right: 20px; /* Απόσταση μεταξύ του χάρτη και της φόρμας */
+    background-color: antiquewhite;
+    border-radius: 5px;
+    justify-content: center;
+    height:490px;
+    width: 882.45px;
+}
+
+#map h1
+{
+    justify-content:center;
+    text-align: center;
+    font-family:Verdana,Tahoma, sans-serif;
+    margin-top: 25px;
+    font-size: 20px;
+    
+}
+
+
+.contact-form {
+    width: 48%; /* Προσαρμόστε το πλάτος της φόρμας όπως επιθυμείτε */
+    padding: 20px;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: larger;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color:darkred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: rgba(169, 50, 38, 0.8);
+}
+
+
+
+
+/*-------katasthmata-----*/
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.store-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between; /* Κατανομή του χώρου μεταξύ των καταστημάτων */
+  margin-top: 50px;
+}
+
+.store {
+  margin-bottom: 30px;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 45%; /* Προσαρμόζεται το πλάτος των καταστημάτων */
+  order: 2; /* Τοποθέτηση του καταστήματος δεξιά */
+  background-color: #f8f2f2a2;
+}
+
+.store:first-child {
+  order: 1; /* Τοποθέτηση του υποκαταστήματος αριστερά */
+}
+
+.store img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.store-details {
+  padding: 20px;
+  text-align: center;
+}
+.store h2
+{
+  text-align: center;
+}
+
+.store-details h2 {
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+
+.store-details p {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+
+.contact-button {
+  text-align: center;
+  margin-top: -10px;
+  
+}
+
+.contact-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: darkred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin:20px;
+}
+
+.contact-button a:hover {
+  background-color: rgba(169, 50, 38, 0.8);
+}
+
+
+
+
+
+
+/* ----- o fournos -----*/
+ .fournoscontainer
+ {
+  margin: 0;
+  padding: 0;
+ }
+
+
+ .fournoscontainer h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: darkred;
+}
+
+.istoria-section,
+.apostoli-section {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+  font-size: 34px;
+  padding: 30px;
+  justify-content: center; /* Ευθυγράμμιση στο κέντρο οριζόντια */
+  
+}
+
+
+
+.apostoli-section
+{
+  background-color: #eeeaeafd;
+}
+
+.apostoli-text
+{
+  order: 2;
+}
+
+.istoria-image img, .apostoli-image img
+{
+  border-radius: 5px;
+  height: 340px;
+  margin: 30px;
+  border-style:solid;
+
+}
+
+
+
+
+
+
+/*-----proionta-----*/
+
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  gap: 6px;
+  margin:50px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.gallery img.four-grid-cells {
+  grid-row: span 2 / auto;
+  grid-column: span 2 / auto;
+}
+
+.gallery img.wide-image {
+  grid-column: span 2 / auto;
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+       grid-template-columns: 1fr 1fr;
+   }
+}
+@media screen and (max-width: 480px) {
+
+  /* changes the grid layout to a single column */
+      div.gallery {
+          grid-template-columns: 1fr;
+      }
+  
+  /* resets the grid placement properties for 
+  the images spanning four grid cells */
+      img.four-grid-cells {
+          grid-row: auto;
+          grid-column: auto;
+      }
+  
+  /* resets the grid placement properties for 
+  the images spanning two grid columns  */
+      img.wide-image {
+          grid-column: auto;
+      }
+  
+  }
+
+/*-----media queries------*/
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+ }
