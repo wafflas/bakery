@@ -342,6 +342,27 @@ html{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
+  .title-popup {
+    position: absolute;
+    top:35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.title-popup h1{
+font-size: 60px;
+}
+
+
+.title-popup h2{
+font-size: 20px;
+
+}
+
+
+
 
 
 

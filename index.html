@@ -73,6 +73,10 @@
     <div class="logo-popup">
         <img class="hideOnMobile" src="images/bakery_logo-removebg-preview.png" alt="Το λογότυπο της εταιρείας">
       </div>
+      <div class="title-popup">
+        <h1>Φούρνος Κουγιουμουτζάκη</h1>
+        <h2>Παραδοσιακός Κρητικός Φούρνος από το 1916</h2>
+      </div>
     <br>
     
     
@@ -243,11 +247,22 @@
         window.addEventListener('scroll', scrollUp)
         </script>
         
-    
-    
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+	
+    <script>
 
-   
-   
+        window.sr= ScrollReveal({duration:1350, distance :'250px', easing:'ease-out'})
+        sr.reveal('.title-popup h1', {origin:'top', reset:false})
+        sr.reveal('.title-popup h2', { origin:'bottom', reset:false})
+
+	</script>
+
+   <script>
+		ScrollReveal().reveal('.description', {origin:'bottom', reset:true})
+        ScrollReveal().reveal('.photo3', { delay: 500 })
+		ScrollReveal().reveal('.photos', { delay: 500 })
+        
+	</script>
 </body>
 </html>
 

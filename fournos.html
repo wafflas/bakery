@@ -140,6 +140,16 @@
         window.addEventListener('scroll', scrollUp)
         </script>
 
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <script>
+		ScrollReveal({ duration: 1000 })
+	</script>
+    <script>
+		ScrollReveal().reveal('.istoria-image', { delay: 700 })
+        ScrollReveal().reveal('.istoria-text', { delay: 500 })
+        ScrollReveal().reveal('.apostoli-image', { delay: 700 })
+        ScrollReveal().reveal('.apostoli-text', { delay: 500 })
+	</script>
+
 </body>
 </html>
