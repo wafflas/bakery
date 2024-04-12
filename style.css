@@ -760,30 +760,31 @@ q {font-style: italic;}
     
 }
 
-#map {
-    width: 50%; /* Προσαρμόστε το πλάτος του χάρτη όπως επιθυμείτε */
-    height: 426px; /* Προσαρμόστε το ύψος του χάρτη όπως επιθυμείτε */
-    margin-right: 20px; /* Απόσταση μεταξύ του χάρτη και της φόρμας */
-    background-color: antiquewhite;
-    border-radius: 5px;
-    justify-content: center;
-    height:490px;
-    width: 882.45px;
+#map-container {
+  width: 882.45px;
+  height: 690px;
+  margin-right: 20px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#map h1
-{
-    justify-content:center;
-    text-align: center;
-    font-family:Verdana,Tahoma, sans-serif;
-    margin-top: 25px;
-    font-size: 20px;
-    
+#map-container h1 {
+  margin-top: 25px;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
+
+
+
 
 
 .contact-form {
     width: 48%; /* Προσαρμόστε το πλάτος της φόρμας όπως επιθυμείτε */
+    height: 650px;
     padding: 20px;
     border-radius: 5px;
     background-color: antiquewhite;
@@ -803,12 +804,16 @@ q {font-style: italic;}
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
+.contact-form input[type="subject"],
 .contact-form textarea {
     width: 90%;
     padding: 10px;
     margin-bottom: 30px;
     border: 2px solid #ccc;
     border-radius: 5px;
+}
+.contact-form textarea {
+height: 120px;
 }
 
 .contact-form button {

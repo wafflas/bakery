@@ -93,6 +93,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+/*---------Email script--------*/
+
+function sendEmail()
+{
+  let parms = {
+    email : document.getElementById("email").value,
+    name : document.getElementById("name").value,
+    subject : document.getElementById("subject").value,
+    message : document.getElementById("message").value,
+  }
+  emailjs.send("service_o1py7lt","template_fxle5we",parms).then(alert("Email Sent!!"));
+}
+
+
 
 
 
