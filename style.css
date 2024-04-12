@@ -804,7 +804,6 @@ q {font-style: italic;}
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
-.contact-form input[type="subject"],
 .contact-form textarea {
     width: 90%;
     padding: 10px;

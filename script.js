@@ -95,5 +95,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /*---------Email script--------*/
 
+function sendMail() {
+  var params = {
+    email: document.getElementById("email").value,
+    name: document.getElementById("name").value,
+    message: document.getElementById("message").value,
+  };
 
+  const serviceID = "service_o1py7lt";
+  const templateID = "template_fxle5we";
 
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("email").value = "";
+        document.getElementById("name").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Your message sent successfully!!");
+
+    })
+    .catch(err=>console.log(err));
+
+}

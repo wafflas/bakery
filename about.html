@@ -80,9 +80,6 @@
                 <label for="name">Όνομα:</label>
                 <input id="name"  type="text" placeholder="Το όνομα σας" name="name" required/>
 
-                <label for="subject">Θέμα:</label>
-                <input id="subject"  type="subject" placeholder="Το θέμα" name="subject" required/>
-
                 <label for="message">Μήνυμα:</label>
                 <textarea id="message"  placeholder="Το μηνυμά σας" name="message" required></textarea>
     
@@ -154,30 +151,6 @@ src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script
 (function () {
   emailjs.init("3oq58sVnjXfZZCDye");
 })();
-</script>
-<script>
-    function sendMail() {
-  var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
-
-  const serviceID = "service_o1py7lt";
-  const templateID = "template_fxle5we";
-
-    emailjs.send(serviceID, templateID, params)
-    .then(res=>{
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("message").value = "";
-        console.log(res);
-        alert("Your message sent successfully!!")
-
-    })
-    .catch(err=>console.log(err));
-
-}
 </script>
 
  <script src="script.js"></script>
