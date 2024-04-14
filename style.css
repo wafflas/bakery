@@ -89,18 +89,22 @@ nav ul li a.active::before {
 
 
 
-
-
-
-
   
-html{
+html,body{
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
-  }
 
+    scroll-behavior: smooth;
+    scroll-snap-type: y; 
+  
+  }
+@media (max-width: 800px) {
+    html, body {
+    overflow-x: hidden;
+    }
+  }
   
   html::-webkit-scrollbar{
     width: .8rem;
@@ -127,7 +131,7 @@ html{
     right: 0;
     height: 100vh;
     width: 250px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.829);
     backdrop-filter: blur(12px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     list-style: none;
@@ -278,7 +282,7 @@ html{
 
   .title-popup {
     position: absolute;
-    top:35%;
+    top:39%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -371,7 +375,7 @@ html{
 
 .description {
     text-align: left;
-    font-size: 3vh;
+    font-size: 2.5vh;
     margin: 20px;
 }
 
@@ -398,17 +402,18 @@ html{
 .product-item {
     flex-basis: 30%;
     margin-bottom: 20px;
+    
 }
 
 .product-item img {
-    width: 100%;
+    width: 30vw;
     border-radius: 5px;
-    height: auto;
+    height: 23vh;
 }
 
 .product-item h3 {
     margin-top: 10px;
-    font-size: medium
+    font-size: 1.5vh
 }
 
 .view-more-button {
@@ -803,6 +808,7 @@ height: 120px;
 .store h2
 {
   text-align: center;
+  font-size: 3vh;
 }
 
 .store-details h2 {
@@ -1264,35 +1270,61 @@ height: 120px;
     align-items: center; /* Καθιστά τα στοιχεία στην κατακόρυφη μέση του ευθύγραμμα */
 }
 
+.footer {
+  background-color: bisque;
+  color: #080303;
+  padding: 50px 0;
+  font-size: 12px;
+  border-radius: 10px;
+  text-align: center; /* Κείμενο στο κέντρο */
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  text-align: center; /* Κείμενο στο κέντρο */
+  align-items: center; /* Καθιστά τα στοιχεία στην κατακόρυφη μέση του ευθύγραμμα */
+}
+
 .footer-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+}
+.footer-section p{
+text-align: left;
+margin: 8px;
 }
 
 .footer-section {
-    flex: 1;
-    margin-bottom: 20px; /* Αλλαγή: Προσθήκη κενού στο κάτω μέρος κάθε τμήματος */
+  flex: 1;
+  margin-bottom: 20px; /* Αλλαγή: Προσθήκη κενού στο κάτω μέρος κάθε τμήματος */
 }
 
 .footer-section h3 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .social-icons2 {
-    font-size: 10px;
-    transform: scale(1.7);
-    margin: 0 auto; /* Κείμενο στο κέντρο */
+  font-size: 10px;
+  transform: scale(1.7);
+  margin: 0 auto; /* Κείμενο στο κέντρο */
 }
 
 .social-icons2 a {
-    margin: 0 10px; /* Αλλαγή: Προσθήκη κενού μεταξύ των εικονιδίων */
+  margin: 0 10px; /* Αλλαγή: Προσθήκη κενού μεταξύ των εικονιδίων */
 }
 
 .social-icons2 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
+
 
 
 /*------fournos------*/
@@ -1404,7 +1436,7 @@ height: 120px;
 
   .description {
     text-align: center;
-    font-size: x-large;
+    
     margin-bottom: 20px; /* Προσθέστε κάποιον επιπλέον χώρο στο κάτω μέρος του description */
   }
   .photos
@@ -1452,6 +1484,10 @@ height: 120px;
     justify-content: center;
     align-items: center;
     margin-left: 30%;
+}
+.footer-section p{
+  text-align: left;
+  margin: 8px;
 }
 
 .footer-section {
