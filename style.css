@@ -88,7 +88,7 @@ nav ul li a.active::before {
 }
 
 
-  
+
 
 
 
@@ -135,7 +135,7 @@ html{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    z-index:1;
+    z-index:1001;
   }
   .sidebar li{
     width: 100%;
@@ -146,50 +146,7 @@ html{
   .menu-button{
     display: none;
   }
-  @media(max-width: 900px){
-    .hideOnMobile{
-      display: none;
-    }
-    .menu-button{
-      display: block;
-    }
-    .social-icons {
-        margin:-30px;
-        margin-bottom: -31px;
-       
-    }
-    
-}
-@media screen and (max-width: 900px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr); /* Μειώστε τον αριθμό των στηλών σε 2 */
-        grid-gap: 20px;
-    }
-
-    .photos {
-        margin-left: 0;
-    }
-
-    .photo3 img {
-        width: 100%;
-    }
-    .titlos
-    {
-       text-align: center; 
-    }
-
-    .description {
-        margin-right: -409px;
-        text-align: left;
-    }
-}
-  @media(max-width: 400px){
-    .sidebar{
-      width: 100%;
-
-    }
-  }
-
+  
 
 
   .button
@@ -212,35 +169,7 @@ html{
     z-index: 2;
   }
 
-  @media screen and (max-width: 600px) {
-    .button {
-        padding: 10px 20px;
-        margin-top:90px;
-        font-size: 14px;
-    }
-    .container {
-        grid-template-columns: repeat(1, 1fr); /* Μόνο μια στήλη για μικρότερες οθόνες */
-        grid-gap: 10px; /* Μικρότερο grid gap για καλύτερη ανάγνωση */
-        margin-top: 10px; /* Μικρότερο top margin */
-      }
-    
-      .photos {
-        margin-left: 0; /* Αφαιρούμε το αρχικό left margin */
-        margin-top: 0; /* Αφαιρούμε το αρχικό top margin */
-      }
-    
-      .photos img {
-        width: 100%; /* Πλήρες πλάτος για φωτογραφίες σε μικρότερες οθόνες */
-        margin-bottom: 10px; /* Μικρότερο bottom margin για καλύτερη διαχείριση χώρου */
-      }
-    
-      .description {
-        text-align: center; /* Κεντράρισμα του κειμένου στο κέντρο της στήλης */
-        margin-top: 10px; /* Μικρότερο top margin */
-        font-size: 11px; /* Μικρότερο μέγεθος γραμματοσειράς για καλύτερη ανάγνωση */
-      }
 
-}
 
   .button:hover
   {
@@ -255,7 +184,7 @@ html{
     z-index: 0; 
     margin: auto;
     overflow: hidden; /* Κρύψτε τις εικόνες που είναι εκτός του παραθύρου προβολής */
-    height:910px;
+    height:auto;
   }
   
   .mySlides {
@@ -315,12 +244,17 @@ html{
       background-color: #717171;
         border: 2px solid white; /* Προσθήκη border κατά το hover */
     }
-    .dots
-    {
-        margin-top:10px;
-        z-index: 3;
-    }
-
+    .dots {
+      position: absolute;
+      bottom: auto;
+      height: auto;
+      margin-top: -50px;
+      width: 100%;
+      text-align: center;
+      z-index: 10; /* Χρησιμοποιήστε υψηλότερο z-index για να επικαλυφθούν οι εικόνες */
+      
+  }
+  
   
   
 
@@ -328,14 +262,14 @@ html{
   .logo-popup {
     display: none;
     position: absolute;
-    top: 17%; /* Προσαρμογή της θέσης προς τα πάνω */
+    top: 15%; /* Προσαρμογή της θέσης προς τα πάνω */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
   }
   
   .logo-popup img {
-    width: 130px;
+    width: 90px;
     height: auto;
     border-radius: 50%;
     border: 2px solid #fff;
@@ -351,14 +285,12 @@ html{
     text-align: center;
 }
 
-.title-popup h1{
-font-size: 60px;
+.title-popup h1 {
+  font-size: 5vw; /* Προσαρμογή με βάση το πλάτος της οθόνης */
 }
 
-
-.title-popup h2{
-font-size: 20px;
-
+.title-popup h2 {
+  font-size: 2vw; /* Προσαρμογή με βάση το πλάτος της οθόνης */
 }
 
 
@@ -373,18 +305,20 @@ font-size: 20px;
     display: flex;
     justify-content: flex-end;
     transform: scale(1.4);
-    margin-right: 80px;
-    
+    margin-right: 60px;
   }
 
-.social-icons .facebook-button + .instagram-button {
-    margin-left: -35px;
+  .social-icons .facebook-button {
+    margin-right: 20px; /* Προσθήκη κενού μεταξύ των εικονιδίων */
 }
 
+
 .social-icons a {
-    display: inline-block;
     width: 16px; 
     height: 16px; 
+    padding-left: 0px;
+    padding-right: 0px;
+    
 }
 
 .social-icons a:hover {
@@ -405,7 +339,7 @@ font-size: 20px;
     grid-gap: 50px;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: auto;
     background-color: rgba(255, 228, 196, 0.671);
     border-radius: 30px
 }
@@ -432,35 +366,15 @@ font-size: 20px;
 .photo3 img {
     width: 690px;
     border-radius: 5px;
+    max-height: auto;
 }
 
 .description {
     text-align: left;
-    font-size: x-large;
+    font-size: 3vh;
+    margin: 20px;
 }
 
-
-@media screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr); /* Αλλαγή σε δύο στήλες για μικρότερες οθόνες */
-        grid-gap: 20px; /* Μικρότερο grid gap για καλύτερη ανάγνωση */
-        margin-top: 20px; /* Μικρότερο top margin */
-    }
-
-    .photos {
-        margin-left: 0; /* Αφαιρούμε το αρχικό left margin */
-        margin-top: 0; /* Αφαιρούμε το αρχικό top margin */
-    }
-
-    .photos img {
-        width: 100%; /* Πλήρες πλάτος για φωτογραφίες σε μικρότερες οθόνες */
-        margin-bottom: 10px; /* Μικρότερο bottom margin για καλύτερη διαχείριση χώρου */
-    }
-
-    .description {
-        text-align: center; /* Κεντράρισμα του κειμένου στο κέντρο της στήλης */
-    }
-}
 
 
 
@@ -489,7 +403,7 @@ font-size: 20px;
 .product-item img {
     width: 100%;
     border-radius: 5px;
-    height: 384px;
+    height: auto;
 }
 
 .product-item h3 {
@@ -568,15 +482,6 @@ font-size: 20px;
 .prev-reviews:hover, .next-reviews:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-/* The dot/bullet/indicator container */
-.dots-reviews {
-  text-align: center;
-  padding: 20px;
-  background: #ddd;
-  margin-bottom: 50px;
-}
-
 /* The dots/bullets/indicators */
 .dot-reviews {
   cursor: pointer;
@@ -588,6 +493,16 @@ font-size: 20px;
     transition: background-color 0.6s ease;
     position: relative;
 }
+
+/* The dot/bullet/indicator container */
+.dots-reviews {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+  margin-bottom: 50px;
+}
+
+
 
 /* Add a background color to the active dot/circle */
 .active, .dot-reviews:hover {
@@ -640,11 +555,10 @@ q {font-style: italic;}
     font-size: 12px;
     border-radius: 10px
 }
-.footer-logo
+.footer-logo img
 {
     height: 140px;
-    
-    margin-right: 100px;
+    width: 140px;
 }
 
 .footer-container {
@@ -667,6 +581,8 @@ q {font-style: italic;}
     margin-bottom: 10px;
     
 }
+
+
 .social-icons2  {
     font-size: 10px;
     transform: scale(1.7);
@@ -761,14 +677,12 @@ q {font-style: italic;}
 }
 
 #map-container {
-  width: 882.45px;
-  height: 690px;
-  margin-right: 20px;
+  width: 48%; /* Προσαρμόστε το πλάτος της φόρμας όπως επιθυμείτε */
+  height: 650px;
+  padding: 20px;
+  border-radius: 8px;
   background-color: antiquewhite;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 25px;
 }
 
 #map-container h1 {
@@ -776,6 +690,19 @@ q {font-style: italic;}
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 20px;
   text-align: center;
+}
+
+.map-wrapper {
+  display: flex;
+  justify-content: center; /* Το frame θα τοποθετηθεί στο κέντρο οριζόντια */
+  align-items: center; /* Το frame θα τοποθετηθεί στο κέντρο κατακόρυφα */
+  width: 100%; /* Πλήρης πλάτος για ευθυγράμμιση στο κέντρο */
+  height: 100%; /* Πλήρης ύψος για ευθυγράμμιση στο κέντρο */
+  margin-top: 60px;
+}
+.map-wrapper iframe {
+  width: 600px; /* Αλλάξτε το πλάτος σύμφωνα με τις ανάγκες σας */
+  height: 400px; /* Αλλάξτε το ύψος σύμφωνα με τις ανάγκες σας */
 }
 
 
@@ -786,8 +713,9 @@ q {font-style: italic;}
     width: 48%; /* Προσαρμόστε το πλάτος της φόρμας όπως επιθυμείτε */
     height: 650px;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: antiquewhite;
+    margin: 25px;
 }
 
 .contact-form h2 {
@@ -837,7 +765,7 @@ height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 8;
 }
 
 .store-container {
@@ -940,9 +868,10 @@ height: 120px;
   display: flex;
   flex-direction: row;
   margin-bottom: 40px;
-  font-size: 34px;
+  font-size: 4vh;
   padding: 30px;
   justify-content: center; /* Ευθυγράμμιση στο κέντρο οριζόντια */
+  align-items: center;
   
 }
 
@@ -1028,29 +957,726 @@ height: 120px;
   
   }
 
+
+
+
+
 /*-----media queries------*/
 
- /* Extra small devices (phones, 600px and down) */
- @media only screen and (max-width: 600px) {
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
 
- }
+@media (min-width: 1281px) {
+  
+  /* CSS */
+  
+  
+}
 
- /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
 
- }
- 
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    background-color: rgba(255, 228, 196, 0.671);
+    border-radius: 30px
+}
 
- }
- 
- /* Large devices (laptops/desktops, 992px and up) */
- @media only screen and (min-width: 992px) {
+.photos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 20px;
+}
 
- }
- 
- /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
+.photos img {
+    display: none;
+}
 
- }
+.photo3 {
+    display: flex;
+    align-items: flex-end; /* τοποθετήστε την τρίτη εικόνα στο κάτω μέρος του container */
+    margin-left:-60px;
+}
+
+.photo3 img {
+    width: 690px;
+    border-radius: 5px;
+    max-height: auto;
+}
+
+.description {
+    text-align: left;
+    font-size: 3vh;
+    margin: 20px;
+}
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+  .container {
+    display: flex; /* Χρησιμοποιήστε flexbox για το κέντροσ του περιεχομένου */
+    flex-direction: column; /* Τα στοιχεία θα εμφανίζονται κατακόρυφα */
+    justify-content: center; /* Κέντροσ κατακόρυφα */
+    align-items: center; /* Κέντροσ οριζόντια */
+    margin-top: 10px;
+    background-color: rgba(255, 228, 196, 0.671);
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center; /* Κείμενο στο κέντρο */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 20px; /* Προσθέστε κάποιον επιπλέον χώρο στο κάτω μέρος του description */
+  }
+  .photos
+  {
+    display: flex;
+  }
+
+  .photo3 {
+    display: none;
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+  } 
+  .container {
+    display: flex; /* Χρησιμοποιήστε flexbox για το κέντροσ του περιεχομένου */
+    flex-direction: column; /* Τα στοιχεία θα εμφανίζονται κατακόρυφα */
+    justify-content: center; /* Κέντροσ κατακόρυφα */
+    align-items: center; /* Κέντροσ οριζόντια */
+    margin-top: 10px;
+    background-color: rgba(255, 228, 196, 0.671);
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center; /* Κείμενο στο κέντρο */
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 20px; /* Προσθέστε κάποιον επιπλέον χώρο στο κάτω μέρος του description */
+  }
+  .photos
+  {
+    display: flex;
+  }
+
+  .photo3 {
+    display: none;
+  }
+
+
+/*------fournos------*/
+.istoria-section,
+  .apostoli-section {
+    flex-direction: column; /* Εμφανίστε τα στοιχεία κατακόρυφα σε κινητές συσκευές */
+    text-align: left; /* Κείμενο στο κέντρο οριζόντια */
+  }
+
+  .istoria-image img,
+  .apostoli-image img {
+    margin: 10px 0; /* Αυξήστε το περιθώριο της εικόνας */
+    order: 1;
+    max-width: 100%;
+  }
+
+  .istoria-text,
+  .apostoli-text {
+    order: 2; /* Μετακινήστε το κείμενο προς τα πάνω */
+    margin-bottom: 20px; /* Προσθήκη κάποιου επιπλέον κενού μεταξύ του κειμένου και της εικόνας */
+  }
+  .istoria-section h1,
+  .apostoli-section h1{
+    text-align: center; /* Κείμενο στο κέντρο οριζόντια */
+  }
+
+
+
+    /*-------about-------*/
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+  
+    #map-container {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  
+    .contact-form {
+      margin-right: 0 ;
+      width: 100%;
+      height: auto;
+    }
+
+
+
+      /*-------katasthmata-------*/
+
+
+.store-container {
+  flex-direction: column; /* Αλλαγή της κατεύθυνσης σε κολώνα */
+  width: 100%;
+}
+
+.store {
+  width: 100%; /* Πλήρες πλάτος για να καταλαμβάνει ολόκληρο το πλάτος του container */
+}
+
+.contact-button {
+  text-align: center; /* Κείμενο κεντρικά */
+}
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+  } 
+  
+  .container {
+    display: flex; /* Χρησιμοποιήστε flexbox για το κέντροσ του περιεχομένου */
+    flex-direction: column; /* Τα στοιχεία θα εμφανίζονται κατακόρυφα */
+    justify-content: center; /* Κέντροσ κατακόρυφα */
+    align-items: center; /* Κέντροσ οριζόντια */
+    margin-top: 10px;
+    background-color: rgba(255, 228, 196, 0.671);
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center; /* Κείμενο στο κέντρο */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 20px; /* Προσθέστε κάποιον επιπλέον χώρο στο κάτω μέρος του description */
+  }
+  .photos
+  {
+    display: flex;
+  }
+
+  .photo3 {
+    display: none;
+  }
+
+
+
+
+.footer {
+    background-color: bisque;
+    color: #080303;
+    padding: 50px 0;
+    font-size: 12px;
+    border-radius: 10px;
+    text-align: center; /* Κείμενο στο κέντρο */
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    text-align: center; /* Κείμενο στο κέντρο */
+    align-items: center; /* Καθιστά τα στοιχεία στην κατακόρυφη μέση του ευθύγραμμα */
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.footer-section {
+    flex: 1;
+    margin-bottom: 20px; /* Αλλαγή: Προσθήκη κενού στο κάτω μέρος κάθε τμήματος */
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+}
+
+.social-icons2 {
+    font-size: 10px;
+    transform: scale(1.7);
+    margin: 0 auto; /* Κείμενο στο κέντρο */
+}
+
+.social-icons2 a {
+    margin: 0 10px; /* Αλλαγή: Προσθήκη κενού μεταξύ των εικονιδίων */
+}
+
+.social-icons2 a:hover {
+    opacity: 0.7;
+}
+
+
+/*------fournos------*/
+.istoria-section,
+  .apostoli-section {
+    flex-direction: column; /* Εμφανίστε τα στοιχεία κατακόρυφα σε κινητές συσκευές */
+    text-align: left; /* Κείμενο στο κέντρο οριζόντια */
+  }
+
+  .istoria-image img,
+  .apostoli-image img {
+    margin: 10px 0; /* Αυξήστε το περιθώριο της εικόνας */
+    order: 1;
+    max-width: 100%;
+  }
+
+  .istoria-text,
+  .apostoli-text {
+    order: 2; /* Μετακινήστε το κείμενο προς τα πάνω */
+    margin-bottom: 20px; /* Προσθήκη κάποιου επιπλέον κενού μεταξύ του κειμένου και της εικόνας */
+  }
+  .istoria-section h1,
+  .apostoli-section h1{
+    text-align: center; /* Κείμενο στο κέντρο οριζόντια */
+  }
+
+
+  /*-------about-------*/
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+
+  }
+
+  #map-container {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    height: auto;
+  }
+
+
+    /*-------katasthmata-------*/
+
+
+.store-container {
+  flex-direction: column; /* Αλλαγή της κατεύθυνσης σε κολώνα */
+  width: 100%;
+}
+
+.store {
+  width: 100%; /* Πλήρες πλάτος για να καταλαμβάνει ολόκληρο το πλάτος του container */
+}
+
+.contact-button {
+  text-align: center; /* Κείμενο κεντρικά */
+}
+
+}
+
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+  } 
+
+
+
+  .container {
+    display: flex; /* Χρησιμοποιήστε flexbox για το κέντροσ του περιεχομένου */
+    flex-direction: column; /* Τα στοιχεία θα εμφανίζονται κατακόρυφα */
+    justify-content: center; /* Κέντροσ κατακόρυφα */
+    align-items: center; /* Κέντροσ οριζόντια */
+    margin-top: 10px;
+    background-color: rgba(255, 228, 196, 0.671);
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center; /* Κείμενο στο κέντρο */
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: x-large;
+    margin-bottom: 20px; /* Προσθέστε κάποιον επιπλέον χώρο στο κάτω μέρος του description */
+  }
+  .photos
+  {
+    display: flex;
+  }
+
+  .photo3 {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: bisque;
+    color: #080303;
+    padding: 50px 0;
+    font-size: 12px;
+    border-radius: 10px;
+    text-align: center; /* Κείμενο στο κέντρο */
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    text-align: center; /* Κείμενο στο κέντρο */
+    align-items: center; /* Καθιστά τα στοιχεία στην κατακόρυφη μέση του ευθύγραμμα */
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.footer-section {
+    flex: 1;
+    margin-bottom: 20px; /* Αλλαγή: Προσθήκη κενού στο κάτω μέρος κάθε τμήματος */
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+}
+
+.social-icons2 {
+    font-size: 10px;
+    transform: scale(1.7);
+    margin: 0 auto; /* Κείμενο στο κέντρο */
+}
+
+.social-icons2 a {
+    margin: 0 10px; /* Αλλαγή: Προσθήκη κενού μεταξύ των εικονιδίων */
+}
+
+.social-icons2 a:hover {
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+/*------fournos------*/
+.istoria-section,
+  .apostoli-section {
+    flex-direction: column; /* Εμφανίστε τα στοιχεία κατακόρυφα σε κινητές συσκευές */
+    text-align: left; /* Κείμενο στο κέντρο οριζόντια */
+  }
+
+  .istoria-image img,
+  .apostoli-image img {
+    margin: 10px 0; /* Αυξήστε το περιθώριο της εικόνας */
+    order: 1;
+    max-width: 100%;
+  }
+
+  .istoria-text,
+  .apostoli-text {
+    order: 2; /* Μετακινήστε το κείμενο προς τα πάνω */
+    margin-bottom: 20px; /* Προσθήκη κάποιου επιπλέον κενού μεταξύ του κειμένου και της εικόνας */
+  }
+  .istoria-section h1,
+  .apostoli-section h1{
+    text-align: center; /* Κείμενο στο κέντρο οριζόντια */
+  }
+
+
+
+
+
+
+
+  /*-------about-------*/
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+
+  }
+
+  #map-container {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+
+  /*-------katasthmata-------*/
+
+
+.store-container {
+  flex-direction: column; /* Αλλαγή της κατεύθυνσης σε κολώνα */
+  width: 100%;
+}
+
+.store {
+  width: 100%; /* Πλήρες πλάτος για να καταλαμβάνει ολόκληρο το πλάτος του container */
+}
+
+.contact-button {
+  text-align: center; /* Κείμενο κεντρικά */
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+ /*@media screen and (max-width: 768px) {
+  .container {
+      grid-template-columns: repeat(2, 1fr); 
+      grid-gap: 20px; 
+      margin-top: 20px; 
+  }
+
+  .photos {
+      margin-left: 0; 
+      margin-top: 0; 
+  }
+
+  .photos img {
+      width: 100%; 
+      margin-bottom: 10px; 
+  }
+
+  .description {
+      text-align: center; 
+  }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+  .container {
+      grid-template-columns: repeat(2, 1fr); 
+      grid-gap: 20px;
+  }
+
+  .photos {
+      margin-left: 0;
+  }
+
+  .photo3 img {
+      width: 100%;
+  }
+  .titlos
+  {
+     text-align: center; 
+  }
+
+  .description {
+      margin-right: -409px;
+      text-align: left;
+  }
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+
+  }
+}
+
+
+
+
+
+
+
+@media(max-width: 900px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  .social-icons {
+      margin:-30px;
+      margin-bottom: -31px;
+     
+  }
+  
+}
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 600px) {
+    .button {
+        padding: 10px 20px;
+        margin-top:90px;
+        font-size: 14px;
+    }
+    .container {
+        grid-template-columns: repeat(1, 1fr); 
+        grid-gap: 10px; 
+        margin-top: 10px; 
+      }
+    
+      .photos {
+        margin-left: 0; 
+        margin-top: 0; 
+      }
+    
+      .photos img {
+        width: 100%; 
+        margin-bottom: 10px; 
+      }
+    
+      .description {
+        text-align: center; 
+        margin-top: 10px; 
+        font-size: 11px; 
+      }
+
+}
+*/
