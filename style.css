@@ -216,7 +216,7 @@ html,body{
     top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -22px;
+    margin-top: auto;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -230,7 +230,7 @@ html,body{
   }
   
   .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(230, 224, 224, 0.61);
   }
   
   .dot {
@@ -457,7 +457,7 @@ html,body{
   display: none;
   padding: 80px;
   text-align: center;
-  font-size: 22px;
+  font-size: 3vh;
 }
 
 /* Next & previous buttons */
