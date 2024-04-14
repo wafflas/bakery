@@ -257,15 +257,12 @@
         window.sr= ScrollReveal({duration:1350, distance :'250px', easing:'ease-out'})
         sr.reveal('.title-popup h1', {origin:'top', reset:false})
         sr.reveal('.title-popup h2', { origin:'bottom', reset:false})
-
+	    sr.reveal('.description', {origin:'bottom', reset:true})
+        sr.reveal('.photo3', { delay: 500 })
+		sr.reveal('.photos', { delay: 500 })
 	</script>
 
-   <script>
-		ScrollReveal().reveal('.description', {origin:'bottom', reset:true})
-        ScrollReveal().reveal('.photo3', { delay: 500 })
-		ScrollReveal().reveal('.photos', { delay: 500 })
-        
-	</script>
+   
 </body>
 </html>
 

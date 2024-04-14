@@ -136,7 +136,17 @@
             
             }
             window.addEventListener('scroll', scrollUp)
-            </script>
+        </script>
+        <script src="https://unpkg.com/scrollreveal@4"></script>
+        <script>
+            ScrollReveal({ duration: 1500 })
+        </script>
+        <script>
+            ScrollReveal().reveal('.store img', { delay: 520 })
+            ScrollReveal().reveal('.store h2', { delay: 500 })
+            ScrollReveal().reveal('.store-details', { delay: 900 })
+            ScrollReveal().reveal('.contact-button', { delay: 600 })
+        </script>
             
 
 </body>

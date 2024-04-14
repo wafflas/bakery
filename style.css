@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -287,7 +291,9 @@ html,body{
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-}
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  
+  }
 
 .title-popup h1 {
   font-size: 5vw; /* Προσαρμογή με βάση το πλάτος της οθόνης */
@@ -413,7 +419,7 @@ html,body{
 
 .product-item h3 {
     margin-top: 10px;
-    font-size: 1.5vh
+    font-size: vh
 }
 
 .view-more-button {
@@ -605,7 +611,7 @@ q {font-style: italic;}
 
 .mpara
 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     justify-content: center;
     background-color: beige;
@@ -704,9 +710,12 @@ q {font-style: italic;}
   width: 100%; /* Πλήρης πλάτος για ευθυγράμμιση στο κέντρο */
   height: 100%; /* Πλήρης ύψος για ευθυγράμμιση στο κέντρο */
   margin-top: 60px;
+  border-style:groove;
+
+  
 }
 .map-wrapper iframe {
-  width: 600px; /* Αλλάξτε το πλάτος σύμφωνα με τις ανάγκες σας */
+  width: 790px; /* Αλλάξτε το πλάτος σύμφωνα με τις ανάγκες σας */
   height: 400px; /* Αλλάξτε το ύψος σύμφωνα με τις ανάγκες σας */
 }
 
@@ -732,7 +741,7 @@ q {font-style: italic;}
 .contact-form label {
     display: block;
     margin-bottom: 10px;
-    font-size: larger;
+    font-size: 15px;
 }
 
 .contact-form input[type="text"],
@@ -865,7 +874,7 @@ height: 120px;
 
  .fournoscontainer h1 {
   margin-bottom: 10px;
-  font-size: 30px;
+  font-size: 50px;
   color: darkred;
 }
 
@@ -874,7 +883,7 @@ height: 120px;
   display: flex;
   flex-direction: row;
   margin-bottom: 40px;
-  font-size: 4vh;
+  font-size: 3.4vh;
   padding: 30px;
   justify-content: center; /* Ευθυγράμμιση στο κέντρο οριζόντια */
   align-items: center;
