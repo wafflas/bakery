@@ -144,6 +144,7 @@ html,body{
     align-items: flex-start;
     justify-content: flex-start;
     z-index:1001;
+    
   }
   .sidebar li{
     width: 100%;
@@ -381,7 +382,7 @@ html,body{
 
 .description {
     text-align: left;
-    font-size: 2.5vh;
+    font-size: 2.7vh;
     margin: 20px;
 }
 
@@ -412,14 +413,15 @@ html,body{
 }
 
 .product-item img {
-    width: 30vw;
+    width: 32vw;
+    height: 19vh;
     border-radius: 5px;
-    height: 23vh;
+    
 }
 
 .product-item h3 {
     margin-top: 10px;
-    font-size: vh
+    font-size: 1.5vh
 }
 
 .view-more-button {
@@ -701,23 +703,29 @@ q {font-style: italic;}
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 20px;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .map-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Το frame θα τοποθετηθεί στο κέντρο οριζόντια */
   align-items: center; /* Το frame θα τοποθετηθεί στο κέντρο κατακόρυφα */
   width: 100%; /* Πλήρης πλάτος για ευθυγράμμιση στο κέντρο */
   height: 100%; /* Πλήρης ύψος για ευθυγράμμιση στο κέντρο */
-  margin-top: 60px;
-  border-style:groove;
-
-  
+  margin-top: -10px;
 }
 .map-wrapper iframe {
-  width: 790px; /* Αλλάξτε το πλάτος σύμφωνα με τις ανάγκες σας */
-  height: 400px; /* Αλλάξτε το ύψος σύμφωνα με τις ανάγκες σας */
+  width: 500px; /* Αλλάξτε το πλάτος σύμφωνα με τις ανάγκες σας */
+  height: 200px; /* Αλλάξτε το ύψος σύμφωνα με τις ανάγκες σας */
+  border-radius: 9px;
 }
+
+.prathreio
+{
+  margin-top: 20px;
+}
+
 
 
 
@@ -1174,6 +1182,10 @@ height: 120px;
       margin-bottom: 20px;
       width: 100%;
     }
+    .map-wrapper iframe {
+      width: 350px; /* Αλλάξτε το πλάτος σύμφωνα με τις ανάγκες σας */
+      height: 200px; /* Αλλάξτε το ύψος σύμφωνα με τις ανάγκες σας */
+    }
   
     .contact-form {
       margin-right: 0 ;
@@ -1374,6 +1386,10 @@ margin: 8px;
     margin-bottom: 20px;
     width: 100%;
   }
+  .map-wrapper iframe {
+    width: 350px; /* Αλλάξτε το πλάτος σύμφωνα με τις ανάγκες σας */
+    height: 200px; /* Αλλάξτε το ύψος σύμφωνα με τις ανάγκες σας */
+  }
 
   .contact-form {
     width: 100%;
@@ -1570,6 +1586,10 @@ margin: 8px;
   #map-container {
     margin-bottom: 20px;
     width: 100%;
+  }
+  .map-wrapper iframe {
+    width: 350px; /* Αλλάξτε το πλάτος σύμφωνα με τις ανάγκες σας */
+    height: 200px; /* Αλλάξτε το ύψος σύμφωνα με τις ανάγκες σας */
   }
 
   .contact-form {
