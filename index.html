@@ -18,11 +18,11 @@
         
             <ul class="sidebar">
                 <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-                <li class="nav-item"><a href="index.html" >Αρχική</a></li>
-                <li class="nav-item"><a href="fournos.html">Ο Φούρνος</a></li>
-                <li class="nav-item"><a href="proionta.html">Προϊόντα</a></li>
-                <li class="nav-item"><a href="katasthmata.html">Καταστήματα</a></li>
-                <li class="nav-item"><a href="about.html">Επικοινωνία</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html" >Αρχική</a></li>
+                <li class="nav-item"><a class="nav-link" href="fournos.html">Ο Φούρνος</a></li>
+                <li class="nav-item"><a class="nav-link" href="proionta.html">Προϊόντα</a></li>
+                <li class="nav-item"><a class="nav-link" href="katasthmata.html">Καταστήματα</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Επικοινωνία</a></li>
             </ul>
             <ul>
                <li class="hideOnMobile" class="nav-item"><a href="index.html" >Αρχική</a></li>
@@ -74,7 +74,7 @@
         <img class="hideOnMobile" src="images/bakery_logo-removebg-preview.png" alt="Το λογότυπο της εταιρείας">
       </div>
       <div class="title-popup">
-        <h1>Φούρνος Κουγιουμουτζάκη</h1>
+        <h1>Φούρνος Κουγιουμουτζάκης</h1>
         <h2>Παραδοσιακός Κρητικός Φούρνος από το 1916</h2>
       </div>
     <br>
@@ -257,12 +257,15 @@
 	
     <script>
 
-        window.sr= ScrollReveal({duration:1350, distance :'250px', easing:'ease-out'})
-        sr.reveal('.title-popup h1', {origin:'top', reset:false})
-        sr.reveal('.title-popup h2', { origin:'bottom', reset:false})
-	    sr.reveal('.description', {origin:'bottom', reset:true})
-        sr.reveal('.photo3', { delay: 500 })
-		sr.reveal('.photos', { delay: 500 })
+        
+        const sr1 = ScrollReveal({ duration:1350, distance:'250px',easing:'ease-out'})
+        sr1.reveal('.title-popup h1', {origin:'top', reset:false,duration:1350, distance :'250px', easing:'ease-out'})
+        sr1.reveal('.title-popup h2', {origin:'bottom', reset:false,duration:1350, distance :'250px', easing:'ease-out'})
+	    sr1.reveal('.description', {origin:'left', reset:false})
+        sr1.reveal('.photo3', { origin:'right',delay: 700,distance:'1px' })
+		sr1.reveal('.photos', {origin:'left', delay: 500,distance:'1px' })
+        sr1.reveal('.product-item', {origin:'left', delay: 400,distance:'1px' })
+        sr1.reveal('.view-more-button', {origin:'left', delay: 450,distance:'1px' })
 	</script>
 
    

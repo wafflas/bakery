@@ -3,6 +3,16 @@
 function showSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'flex'
+    sidebar.animate(
+      [
+          { transform: "translateX(100%)" }, // Ξεκινά από τα αριστερά της οθόνης
+          { transform: "translateΧ(0)" } // Μετακινείται στην αρχική θέση
+      ],
+      {
+          duration: 700,
+          easing: 'ease-in-out'
+      }
+  );
   }
   function hideSidebar(){
     const sidebar = document.querySelector('.sidebar')
@@ -11,6 +21,13 @@ function showSidebar(){
 
 
 
+
+  var navItems = document.querySelectorAll(".nav-item");
+  for (var i = 0; i < navItems.length; i++) {
+     navItems[i].addEventListener("click", function() {
+        this.classList.add("active");
+     });
+    }
 
 
 
