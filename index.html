@@ -104,11 +104,11 @@
                 </p>
         </div>
         <div class="photos">
-            <img src="images/giagia.jpg" alt="Photo 1">
-            <img src="images/pswmi4.jpg" alt="Photo 2">
+            <img class="myImages" id="myImg" src="images/giagia.jpg" alt="">
+            <img  class="myImages" id="myImg"src="images/pswmi4.jpg" alt="">
         </div>
         <div class="photo3">
-            <img src="images/mizes.jpg" alt="Photo 3">
+            <img  class="myImages" id="myImg"src="images/mizes.jpg" alt="">
         </div>
         
     </div>
@@ -118,15 +118,15 @@
         <h1 style="font-size: xx-large; color: darkred;">Τα Προϊόντα μας</h1>
         <div class="product-gallery">
             <div class="product-item">
-                <img  src="images/topswmi.jpg" alt="Προϊόν 1">
+                <img class="myImages" id="myImg" src="images/topswmi.jpg" alt="Το ψωμί μας">
                 <h3>Το ψωμί μας</h3>
             </div>
             <div class="product-item">
-                <img src="images/gluka.jpg" alt="Προϊόν 2">
+                <img class="myImages" id="myImg" src="images/gluka.jpg" alt="Ζαχαροπλαστική">
                 <h3>Ζαχαροπλαστική</h3>
             </div>
             <div class="product-item">
-                <img src="images/kafes2.jpg" alt="Προϊόν 3">
+                <img class="myImages" id="myImg" src="images/kafes2.jpg" alt="Καφές & Αρτοσκευάσματα">
                 <h3>Καφές & Αρτοσκευάσματα</h3>
             </div>
         </div>
@@ -134,7 +134,11 @@
     </div>
     
 
-
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
 
     <div class="slideshow-reviews">
         <h1 style="text-align: center; color: darkred; padding-top: 20px; font-size: 5vh;">Κριτικές</h1>
@@ -268,6 +272,34 @@
         sr1.reveal('.view-more-button', {origin:'left', delay: 450,distance:'1px' })
 	</script>
 
+    <script>
+        // Get the modal
+    // create references to the modal...
+        var modal = document.getElementById('myModal');
+        // to all images -- note I'm using a class!
+        var images = document.getElementsByClassName('myImages');
+        // the image in the modal
+        var modalImg = document.getElementById("img01");
+        // and the caption in the modal
+        var captionText = document.getElementById("caption");
+
+        // Go through all of the images with our custom class
+        for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        // and attach our click listener for this image.
+        img.onclick = function(evt) {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+        modal.style.display = "none";
+            }
+        </script>
    
 </body>
 </html>

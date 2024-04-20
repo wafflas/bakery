@@ -73,7 +73,7 @@
             δίνοντας ένα νέο <strong>αέρα</strong> στο εργαστήριο, με νέες <strong>ιδέες</strong> και <strong>καινοτομίες</strong> για απολαυστικά προϊόντα αρτοποιείας.  </p>
                 </div>
                 <div class="istoria-image">
-                    <img src="images/mizes2.jpg" alt="Ιστορία">
+                    <img class="myImages" id="myImg" src="images/mizes2.jpg" alt="Ιστορία">
                 </div>
             </div>
             <div class="apostoli-section">
@@ -87,12 +87,16 @@
                     </p>
                 </div>
                 <div class="apostoli-image">
-                    <img src="images/zumwma2.jpg" alt="Αποστολή">
+                    <img class="myImages" id="myImg" src="images/zumwma2.jpg" alt="Αποστολή">
                 </div>
         </div>
   </div>
 
-
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
   
 
 
@@ -167,6 +171,33 @@
         ScrollReveal().reveal('.apostoli-image', {origin:'left', delay: 300,distance:'1px'})
         ScrollReveal().reveal('.apostoli-text', {origin:'left', delay: 350,distance:'1px'})
 	</script>
+    <script>
+        // Get the modal
+    // create references to the modal...
+        var modal = document.getElementById('myModal');
+        // to all images -- note I'm using a class!
+        var images = document.getElementsByClassName('myImages');
+        // the image in the modal
+        var modalImg = document.getElementById("img01");
+        // and the caption in the modal
+        var captionText = document.getElementById("caption");
 
+        // Go through all of the images with our custom class
+        for (var i = 0; i < images.length; i++) {
+        var img = images[i];
+        // and attach our click listener for this image.
+        img.onclick = function(evt) {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+        modal.style.display = "none";
+            }
+    </script>
 </body>
 </html>
