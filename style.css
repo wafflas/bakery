@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Tilt+Neon:XROT,YROT@2,-45&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Tilt+Neon:XROT,YROT@2,-45&family=Varela+Round&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=PT+Sans+Narrow:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Neon:XROT,YROT@2,-45&family=Varela+Round&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: "Tilt Neon", sans-serif;
+    font-family: "Poppins", sans-serif;
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -276,7 +276,7 @@ html,body{
   .logo-popup {
     display: none;
     position: absolute;
-    top: 15%; /* Προσαρμογή της θέσης προς τα πάνω */
+    top: 16%; /* Προσαρμογή της θέσης προς τα πάνω */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
@@ -944,20 +944,25 @@ height: 120px;
   padding: 0;
   overflow: hidden;
   margin-left:50px;
+  background-color: darkred; /* Χρώμα φόντου */
+  display: flex;
+  justify-content: center;
+  border-radius:10px ;
 }
 
 .nav-products li {
   float: left;
+  
 }
 
 .nav-products li a {
   display: block;
   justify-items: center;
-  color: rgb(0, 0, 0); /* Χρώμα κειμένου */
-  text-align: center;
+  color: rgb(255, 255, 255); /* Χρώμα κειμένου */
+  text-align: left;
   padding: 14px 16px; /* Εστίαση */
   text-decoration: none;
-  font-size: 1.8vh;
+  font-size: 2vh;
 
 }
 
@@ -1009,12 +1014,23 @@ height: 120px;
   border-radius: 5px;
   padding: 10px;
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* Τοποθέτηση στοιχείων στα δεξιά και αριστερά */
+  align-items: center; 
   width: auto;
   background-color: #fdfcfc;
   text-align: center;
 }
+.proionta p
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 250%;
+  text-align: left;
+  margin-left: 70px;
+  font-weight: 550;
+}
+
 
 .proionta img {
   width: 30%; /* Προσαρμόστε το μέγεθος της εικόνας όπως επιθυμείτε */
@@ -1030,21 +1046,128 @@ section h2
 {
   margin: 30px;
 }
-.proionta h2{
-  margin-left: 50px;
-}
 
-.proionta h3 {
-  
-  font-size: 2.2vh;
 
-}
 
 .proionta h4 {
  
   font-size: 14px;
   color: #888; /* Χρώμα για τα γραμμάρια */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-size: 25px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position:relative;
+  left: 80%;
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-----media queries------*/
 
 /* 
@@ -1231,6 +1354,33 @@ section h2
 }
 
 
+
+
+/*-------proionta-------*/
+
+
+.categories section .proionta {
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  justify-content: center; /* Προσθήκη για τον κέντρο */
+ 
+}
+
+
+
+.proionta > div {
+  width: 113%;
+  margin-left: -8%;
+  margin-bottom: 10px;
+}
+
+.proionta img
+{
+  width: 30%;
+}
+
+
+
 }
 
 /* 
@@ -1351,6 +1501,33 @@ section h2
 
 .contact-button {
   text-align: center; /* Κείμενο κεντρικά */
+}
+
+
+
+
+
+/*-------proionta-------*/
+
+
+.categories section .proionta {
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  justify-content: center; /* Προσθήκη για τον κέντρο */
+ 
+}
+
+
+
+.proionta > div {
+  width: 112%;
+  margin-left: -10%;
+  margin-bottom: 10px;
+}
+
+.proionta img
+{
+  width: 30%;
 }
 
   
@@ -1576,6 +1753,29 @@ margin: 8px;
 }
 
 
+
+/*-------proionta-------*/
+
+
+.categories section .proionta {
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  justify-content: center; /* Προσθήκη για τον κέντρο */
+ 
+}
+
+
+
+.proionta > div {
+  width: 119%;
+  margin-left: -13%;
+  margin-bottom: 10px;
+}
+
+.proionta img
+{
+  width: 30%;
+}
 
 }
 
@@ -1809,24 +2009,42 @@ margin: 8px;
   justify-content: center; /* Προσθήκη για τον κέντρο */
  
 }
+
+
+
 .proionta > div {
-  min-width:100%;
-  margin-bottom: 1px;
-  text-align: center;
-} 
+  width: 124%;
+  margin-left: -16%;
+  margin-bottom: 10px;
+}
 
 .proionta img
 {
   width: 30%;
 }
 
-
-
+.categories h2
+{
+    margin-left: -5%;
 }
 
 
 
-
+.nav-products ul {
+  list-style-type: none; /* Καθαρίζει τα στυλ λίστας */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex; /* Προσθήκη ευελιξίας */
+  justify-content: center; /* Προσθήκη ευέλικτης ευθυγράμμισης */
+  /* Βεβαιωθείτε ότι το navbar βρίσκεται πάνω από όλα τα άλλα στοιχεία */
+}
+.nav-products ul a
+{
+  font-size: 10px;
+  padding: auto;
+}
+}
 
 
 

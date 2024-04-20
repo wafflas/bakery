@@ -136,19 +136,8 @@ function sendMail() {
 }
 
 
-/*const sr = ScrollReveal({
-  duration: 1500
-})
-
-const srTop = ScrollReveal({duration:1350, distance :'250px', easing:'ease-out'})
 
 
-
-srTop.reveal('.title-popup h1', {origin:'top', reset:false})
-srTop.reveal('.title-popup h2', { origin:'bottom', reset:false})
-sr.reveal('.description', { delay:600})
-sr.reveal('.photo3', { delay: 500 })
-sr.reveal('.photos', { delay: 500 })*/
 
 
 
