@@ -5,8 +5,8 @@ function showSidebar(){
     sidebar.style.display = 'flex'
     sidebar.animate(
       [
-          { transform: "translateX(100%)" }, // Ξεκινά από τα αριστερά της οθόνης
-          { transform: "translateΧ(0)" } // Μετακινείται στην αρχική θέση
+          { transform: "translateX(100%)" }, 
+          { transform: "translateΧ(0)" } 
       ],
       {
           duration: 700,
@@ -20,14 +20,6 @@ function showSidebar(){
   }
 
 
-
-
-  var navItems = document.querySelectorAll(".nav-item");
-  for (var i = 0; i < navItems.length; i++) {
-     navItems[i].addEventListener("click", function() {
-        this.classList.add("active");
-     });
-    }
 
 
 
@@ -61,7 +53,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  timer = setTimeout(function() { plusSlides(1); }, 8000); // Αυτόματη προχώρηση σε επόμενη φωτογραφία κάθε 8 δευτερόλεπτα
+  timer = setTimeout(function() { plusSlides(1); }, 4000); 
 } 
 
 
@@ -94,7 +86,7 @@ function showSlidesRev(n) {
     }
   slides[slideIndexRev-1].style.display = "block";
   dots[slideIndexRev-1].className += " active";
-  timerRev = setTimeout(function() { plusSlidesRev(1); }, 8000); // Αυτόματη προχώρηση σε επόμενη φωτογραφία κάθε 8 δευτερόλεπτα
+  timerRev = setTimeout(function() { plusSlidesRev(1); }, 8000); 
 } 
 
 
@@ -134,6 +126,7 @@ function sendMail() {
     .catch(err=>console.log(err));
 
 }
+
 
 
 
