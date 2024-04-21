@@ -63,6 +63,7 @@ nav a {
     position: relative;
 }
 
+
 nav ul li a:hover
 {
   color: darkred;
@@ -161,7 +162,11 @@ html,body{
   }
   .menu-button{
     display: none;
+
   }
+
+  
+
   
 
 
