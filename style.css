@@ -2040,6 +2040,7 @@ margin: 8px;
   display: flex; 
   justify-content: center; 
   z-index:1000;
+  border-radius: 0px;
 }
 .nav-products ul a
 {
