@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /license.txt
+Disallow: /readme.html
+Disallow: /search/
+Disallow: /print/
+Disallow: /tag/
+Disallow: /category/
+Disallow: /page/
+Disallow: /author/
+Disallow: /archive/
+Disallow: /trackback/
+Disallow: /comment-page-
+Disallow: /embed/
+
+Sitemap: https://www.kougioumoutzakisbakery.gr/sitemap.xml
