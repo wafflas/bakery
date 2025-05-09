@@ -1,0 +1,1 @@
+This project is a static website developed as my first web development endeavor for a local bakery. Built using HTML, CSS, and JavaScript, it showcases the bakery's products, locations, and story through a clean, responsive design. The site was deployed via Vercel and served as a practical introduction to frontend development and client collaboration.
